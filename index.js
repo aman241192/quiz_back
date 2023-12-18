@@ -32,6 +32,7 @@ app.put("/update/:_id", async (req, res) => {
 
 app.post("/search", async (req, res) => {
   let data = await Products.find({ email: req.body.email });
+  console.log("data", data);
   res.send(data);
 });
 
